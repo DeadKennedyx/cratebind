@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.create(name: "Cratebind", email: "cratebind@test.com")
+task = Task.create(name: "Task1", deadline: 10.days.from_now)
+project = Project.create(name: "Project1", start_date: Time.now)
+
+user.tasks << task
+user.save
+project.tasks << task
+project.save
