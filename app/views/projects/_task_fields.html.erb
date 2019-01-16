@@ -13,5 +13,13 @@
     <br>
     <%= f.select :user_ids, User.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
   </div>
+  <div id='attachments'>
+    <%= f.fields_for :attachments do |attachment| %>
+      <%= render 'attachment_fields', :f => attachment %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'add attachment', f, :attachments %>
+    </div>
+  </div>
   <%= link_to_remove_association "remove task", f %>
 </div>

@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190116010748) do
+ActiveRecord::Schema.define(version: 20190116222659) do
+
+  create_table "attachments", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.bigint "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer "task_id"
+    t.index ["task_id"], name: "index_attachments_on_task_id"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
@@ -27,6 +38,10 @@ ActiveRecord::Schema.define(version: 20190116010748) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "project_id"
+    t.string "attachment_file_name"
+    t.string "attachment_content_type"
+    t.bigint "attachment_file_size"
+    t.datetime "attachment_updated_at"
     t.index ["project_id"], name: "index_tasks_on_project_id"
   end
 

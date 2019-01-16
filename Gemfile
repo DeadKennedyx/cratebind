@@ -24,6 +24,7 @@ gem "devise-async"
 gem "sidekiq"
 gem "pry"
 gem "cocoon"
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
