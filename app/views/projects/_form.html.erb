@@ -1,10 +1,18 @@
-<div class="project"><%= project.name %></div>
-<div id="error_explanation"></div>
-<%= form_for project, remote: true do |f| %>
-  <form>
-    <%= f.label "name:" %>
+<%= form_for project, remote:true do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <br/>
     <%= f.text_field :name %>
-    <%= f.submit %>
-  </form>
+  </div>
+  <h3>Tasks</h3>
+  <div id='tasks'>
+    <%= f.fields_for :tasks do |task| %>
+      <%= render 'task_fields', :f => task %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'add task', f, :tasks %>
+    </div>
+  </div>
+  <%= f.submit 'Save' %>
 <% end %>
 <%= link_to "Go back", projects_path %>

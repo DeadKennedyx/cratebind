@@ -1,0 +1,17 @@
+<div class='nested-fields'>
+  <div class="field">
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.check_box :done %>
+    <%= f.label :done %>
+  </div>
+  <div class="field">
+    <%= f.label :assign_users %>
+    <br>
+    <%= f.select :user_ids, User.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
+  </div>
+  <%= link_to_remove_association "remove task", f %>
+</div>

@@ -25,7 +25,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params[:project].permit(:name)
+    params[:project].permit(:name, tasks_attributes: [:id, :name, :done, :_destroy, user_ids: []])
   end
 
   private
