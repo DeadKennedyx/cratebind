@@ -1,0 +1,8 @@
+<%= link_to "Create new project", new_project_path %>
+<% @projects.each do |x| %>
+  <div>
+    <h1><%= x.name %></h1>
+    <%= link_to "Edit", edit_project_path(x.id) %>
+    <%= link_to "Delete", project_path(x.id), method: :delete, remote: true, class: "delete_project" %>
+  </div>
+<% end %>

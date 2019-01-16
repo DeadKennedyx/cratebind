@@ -1,0 +1,10 @@
+<div class="project"><%= project.name %></div>
+<div id="error_explanation"></div>
+<%= form_for project, remote: true do |f| %>
+  <form>
+    <%= f.label "name:" %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+  </form>
+<% end %>
+<%= link_to "Go back", projects_path %>

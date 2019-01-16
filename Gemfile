@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
+gem 'jquery-rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -21,6 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem "devise"
 gem "devise-async"
 gem "sidekiq"
+gem "pry"
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
