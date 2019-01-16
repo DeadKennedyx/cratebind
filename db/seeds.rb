@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create(name: "Cratebind", email: "cratebind@test.com")
+user = User.create(name: "Cratebind", email: "cratebind@test.com", password: "test123", password_confirmation: "test123")
 task = Task.create(name: "Task1", deadline: 10.days.from_now)
 project = Project.create(name: "Project1", start_date: Time.now)
 
