@@ -38,10 +38,6 @@ ActiveRecord::Schema.define(version: 20190116222659) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "project_id"
-    t.string "attachment_file_name"
-    t.string "attachment_content_type"
-    t.bigint "attachment_file_size"
-    t.datetime "attachment_updated_at"
     t.index ["project_id"], name: "index_tasks_on_project_id"
   end
 
