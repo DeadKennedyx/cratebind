@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+
+body{
+  margin: 0px;
+}
+
+header .logout-btn{
+  color: #F5F5F5;
+  padding: 10px 20px;
+  background-color: #E9533F;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: normal;
+  line-height: 19px;
+  font-weight: 400;
+  float: right;
+  margin-top: 10px;
+}
+
+header img {
+  height: 50px;
+}
+header{
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  display: block;
+}

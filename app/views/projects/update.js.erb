@@ -1,6 +1,6 @@
 $('#error_explanation').html("");
 <% if @project.valid? %>
-  $(".project").html("<%= j render 'project' %>");
+  $('#success_alert').append("<div class='alert alert-success' role='alert'>Project succesfully updated!</div>");
 <% else %>
   <% @project.errors.full_messages.each do |message| %>
     $('#error_explanation').append("<li> <%= escape_javascript(message) %> </li>");

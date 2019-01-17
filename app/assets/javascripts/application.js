@@ -15,3 +15,19 @@
 //= require cocoon
 //= require turbolinks
 //= require_tree .
+window.onload = function() {
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $(input).parent().find("img").attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$(".image_input").change(function() {
+  readURL(this);
+});
+}
